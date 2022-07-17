@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php the_title(); ?>  </title>
+    <title><?php get_bloginfo('name'); ?>  </title>
     <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/uikit.js"></script>
@@ -73,7 +73,15 @@
                             class="uk-navbar-item uk-logo" href="index.html"><img src="<?php echo get_template_directory_uri() ?>/assets/imgs/logo.svg" width="90"
                                 height="32" alt="Logo"></a>
                         <nav class="uk-visible@m">
-                            <ul class="uk-navbar-nav">
+                            <?php 
+                            wp_nav_menu(array(
+                                'menu'=>'Top Menu',
+                                'menu_class'=>'uk-navbar-nav',
+                                'container'=>'',
+                                'theme_location'=>'top-menu'
+                            ))
+                            ?>
+                            <!-- <ul class="uk-navbar-nav">
                                 <li><a href="catalog.html">Catalog<span class="uk-margin-xsmall-left"
                                             uk-icon="icon: chevron-down; ratio: .75;"></span></a>
                                     <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove-vertical"
@@ -84,7 +92,7 @@
                                                     <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                             href="category.html"><img
                                                                 class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                                src="<?php echo get_template_directory_uri() ?>/assets/imgs/catalog/computers.svg"
+                                                                src="/assets/imgs/catalog/computers.svg"
                                                                 alt="Laptops &amp; Tablets" width="80" height="80">
                                                             <div class="uk-text-bolder">Laptops &amp; Tablets</div>
                                                         </a>
@@ -101,7 +109,7 @@
                                                     <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                             href="category.html"><img
                                                                 class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                                src="<?php echo get_template_directory_uri() ?>/assets/imgs/catalog/phones.svg"
+                                                                src="/assets/imgs/catalog/phones.svg"
                                                                 alt="Phones &amp; Gadgets" width="80" height="80">
                                                             <div class="uk-text-bolder">Phones &amp; Gadgets</div>
                                                         </a>
@@ -119,7 +127,7 @@
                                                     <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                             href="category.html"><img
                                                                 class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                                src="<?php echo get_template_directory_uri() ?>/assets/imgs/catalog/tv.svg" alt="TV &amp; Video"
+                                                                src="/assets/imgs/catalog/tv.svg" alt="TV &amp; Video"
                                                                 width="80" height="80">
                                                             <div class="uk-text-bolder">TV &amp; Video</div>
                                                         </a>
@@ -138,7 +146,7 @@
                                                     <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                             href="category.html"><img
                                                                 class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                                src="<?php echo get_template_directory_uri() ?>/assets/imgs/catalog/games.svg"
+                                                                src="/assets/imgs/catalog/games.svg"
                                                                 alt="Games &amp; Entertainment" width="80" height="80">
                                                             <div class="uk-text-bolder">Games &amp; Entertainment</div>
                                                         </a>
@@ -156,7 +164,7 @@
                                                     <div class="uk-margin-top uk-margin-bottom"><a class="uk-link-reset"
                                                             href="category.html"><img
                                                                 class="uk-display-block uk-margin-auto uk-margin-bottom"
-                                                                src="<?php echo get_template_directory_uri() ?>/assets/imgs/catalog/photo.svg" alt="Photo" width="80"
+                                                                src="/assets/imgs/catalog/photo.svg" alt="Photo" width="80"
                                                                 height="80">
                                                             <div class="uk-text-bolder">Photo</div>
                                                         </a>
@@ -182,7 +190,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Apple">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/apple.svg" alt="Apple"></figure>
+                                                                    src="/assets/imgs/brands/apple.svg" alt="Apple"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -190,7 +198,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Samsung">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/samsung.svg" alt="Samsung">
+                                                                    src="/assets/imgs/brands/samsung.svg" alt="Samsung">
                                                             </figure>
                                                         </a></div>
                                                 </li>
@@ -199,7 +207,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Sony">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/sony.svg" alt="Sony"></figure>
+                                                                    src="/assets/imgs/brands/sony.svg" alt="Sony"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -207,7 +215,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Microsoft">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/microsoft.svg" alt="Microsoft">
+                                                                    src="/assets/imgs/brands/microsoft.svg" alt="Microsoft">
                                                             </figure>
                                                         </a></div>
                                                 </li>
@@ -216,7 +224,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Intel">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/intel.svg" alt="Intel"></figure>
+                                                                    src="/assets/imgs/brands/intel.svg" alt="Intel"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -224,7 +232,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="HP">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/hp.svg" alt="HP"></figure>
+                                                                    src="/assets/imgs/brands/hp.svg" alt="HP"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -232,7 +240,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="LG">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/lg.svg" alt="LG"></figure>
+                                                                    src="/assets/imgs/brands/lg.svg" alt="LG"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -240,7 +248,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Lenovo">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/lenovo.svg" alt="Lenovo">
+                                                                    src="/assets/imgs/brands/lenovo.svg" alt="Lenovo">
                                                             </figure>
                                                         </a></div>
                                                 </li>
@@ -249,7 +257,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="ASUS">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/asus.svg" alt="ASUS"></figure>
+                                                                    src="/assets/imgs/brands/asus.svg" alt="ASUS"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -257,7 +265,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Acer">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/acer.svg" alt="Acer"></figure>
+                                                                    src="/assets/imgs/brands/acer.svg" alt="Acer"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -265,7 +273,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Dell">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/dell.svg" alt="Dell"></figure>
+                                                                    src="/assets/imgs/brands/dell.svg" alt="Dell"></figure>
                                                         </a></div>
                                                 </li>
                                                 <li>
@@ -273,7 +281,7 @@
                                                             class="uk-link-muted uk-text-center uk-display-block uk-padding-small uk-box-shadow-hover-large tm-media-box"
                                                             href="#" title="Canon">
                                                             <figure class="tm-media-box-wrap"><img
-                                                                    src="<?php echo get_template_directory_uri() ?>/assets/imgs/brands/canon.svg" alt="Canon"></figure>
+                                                                    src="/assets/imgs/brands/canon.svg" alt="Canon"></figure>
                                                         </a></div>
                                                 </li>
                                             </ul>
@@ -318,7 +326,7 @@
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contacts.html">Contacts</a></li>
-                            </ul>
+                            </ul> -->
                         </nav>
                     </div>
                     <div class="uk-navbar-right"><a class="uk-navbar-toggle tm-navbar-button" href="#"
